@@ -1,0 +1,52 @@
+graph TD
+  A[Student Lifecycle Management] -->|Apply| B[Application & Admissions]
+  B -->|Submit Documents| B1[Document Upload]
+  B -->|Track Status| B2[Application Status]
+  B -->|Decision| B3[Acceptance / Rejection]
+
+  B3 -->|Accepted| C[Enrolment & Registration]
+  C -->|Select Courses| C1[Course Selection]
+  C -->|Confirm Details| C2[Personal & Contact Info]
+  C -->|Pay Fees| C3[Tuition Fee Payment]
+
+  C -->|Start Courses| D[Academic Records]
+  D -->|View Grades| D1[Course Grades]
+  D -->|Track Attendance| D2[Attendance]
+  D -->|Request Transcripts| D3[Transcript Requests]
+
+  D -->|Complete Degree| E[Graduation & Certification]
+  E -->|Apply for Graduation| E1[Graduation Application]
+  E -->|Get Certificate| E2[Certificate Issuance]
+  E -->|Alumni Access| E3[Alumni Portal]
+
+  A -->|Manage Courses| F[Course & Curriculum Management]
+  F -->|View Catalog| F1[Course Catalog]
+  F -->|Schedule Classes| F2[Class Timetable]
+  F -->|Assign Instructors| F3[Instructor Allocation]
+  F -->|Exam Scheduling| F4[Exam Timetable]
+
+  A -->|Manage Finances| G[Finance & Billing]
+  G -->|Student Dashboard| G1[Financial Summary]
+  G -->|Pay Fees| G2[Invoice & Payments]
+  G -->|Scholarships| G3[Grants & Aid]
+  G -->|Refunds| G4[Processing Refunds]
+
+  A -->|HR & Payroll| H[Faculty & Staff]
+  H -->|Manage Staff| H1[Employee Portal]
+  H -->|Leave Requests| H2[Attendance & Leave]
+  H -->|Payroll Processing| H3[Salaries & Benefits]
+  H -->|Performance Review| H4[Appraisals]
+
+  A -->|Research & Grants| I[Research Management]
+  I -->|Apply for Grants| I1[Grant Applications]
+  I -->|Track Projects| I2[Research Budgeting]
+  I -->|Monitor Expenses| I3[Financial Tracking]
+
+  A -->|Institutional Compliance| J[Reports & Compliance]
+  J -->|Generate Reports| J1[Regulatory Reports]
+  J -->|Manage Accreditation| J2[Compliance & Audits]
+
+  A -->|Campus Services| K[Student Support]
+  K -->|Library Access| K1[Library Management]
+  K -->|Housing Portal| K2[Accommodation]
+  K -->|Wellness Services| K3[Counseling & Support]
