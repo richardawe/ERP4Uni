@@ -1,21 +1,24 @@
 [build]
-command = "streamlit run streamlit_frontend/Home.py"
+command = """
+pip install -r requirements.txt &&
+streamlit run streamlit_frontend/Home.py --server.port $PORT --server.address 0.0.0.0
+"""
 publish = "streamlit_frontend"
-functions = "netlify/functions"
 
 [build.environment]
-PYTHON_VERSION = "3.11"
-STREAMLIT_SERVER_PORT = "8501"
+PYTHON_VERSION = "3.9"
+PORT = "8501"
 
 [[redirects]]
+force = true
 from = "/*"
-to = "/index.html"
 status = 200
+to = "/"
 
 [dev]
-framework = "streamlit"
-targetPort = 8501
+command = "streamlit run streamlit_frontend/Home.py"
+framework = "#custom"
+port = 8501
 
-[functions]
-directory = "netlify/functions"
-node_bundler = "esbuild" 
+[[plugins]]
+package = "@netlify/plugin-functions-install-core" 
