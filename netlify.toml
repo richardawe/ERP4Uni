@@ -1,23 +1,22 @@
 [build]
-command = "./netlify_build.sh"
+command = "pip install -r requirements.txt"
+functions = "netlify/functions"
 publish = "streamlit_frontend"
 
 [build.environment]
-PYTHON_VERSION = "3.8.10"
+PYTHON_VERSION = "3.8"
 PYTHONPATH = "."
-NODE_VERSION = "16"
-PORT = "8501"
 
 [[redirects]]
 from = "/*"
-to = "/index.html"
+to = "/.netlify/functions/streamlit"
 status = 200
 force = true
 
-[dev]
-command = "./netlify_build.sh"
-framework = "#custom"
-port = 8501
+[functions]
+directory = "netlify/functions"
+node_bundler = "esbuild"
 
-[[plugins]]
-package = "@netlify/plugin-functions-core" 
+[dev]
+framework = "#custom"
+port = 8501 
